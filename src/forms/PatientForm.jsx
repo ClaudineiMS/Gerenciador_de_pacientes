@@ -1,4 +1,3 @@
-// src/forms/PatientForm.js
 import React, { useContext, useState } from 'react';
 import InputMask from 'react-input-mask';
 import PatientContext from '../contexts/PatientContext';
@@ -6,14 +5,14 @@ import './PatientForm.css';
 
 function PatientForm() {
   const { addPatient } = useContext(PatientContext);
-  const [name, setName] = useState('');
+  const [nome, setnome] = useState('');
   const [cpf, setCpf] = useState('');
-  const [birthDate, setBirthDate] = useState('');
+  const [data_nascimento, setdata_nascimento] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!name || !cpf || !birthDate) {
+    if (!nome || !cpf || !data_nascimento) {
       alert('Todos os campos são obrigatórios.');
       return;
     }
@@ -22,16 +21,16 @@ function PatientForm() {
     const formattedCpf = cpf.replace(/\D/g, '');
 
     const newPatient = {
-      id: Math.random().toString(36).substr(2, 9),
-      name,
+      //id: Math.random().toString(36).substr(2, 9),
+      nome,
       cpf: formattedCpf,
-      birthDate,
+      data_nascimento,
     };
 
     addPatient(newPatient);
-    setName('');
+    setnome('');
     setCpf('');
-    setBirthDate('');
+    setdata_nascimento('');
   };
 
   return (
@@ -40,8 +39,8 @@ function PatientForm() {
         <label>Nome:</label>
         <input
           type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={nome}
+          onChange={(e) => setnome(e.target.value)}
           required
         />
       </div>
@@ -60,8 +59,8 @@ function PatientForm() {
         <label>Data de Nascimento:</label>
         <input
           type="date"
-          value={birthDate}
-          onChange={(e) => setBirthDate(e.target.value)}
+          value={data_nascimento}
+          onChange={(e) => setdata_nascimento(e.target.value)}
           required
         />
       </div>
