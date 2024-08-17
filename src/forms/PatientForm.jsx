@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import InputMask from 'react-input-mask';
 import PatientContext from '../contexts/PatientContext';
-import './PatientForm.css';
+import './css/PatientForm.css';
 
 function PatientForm() {
   const { addPatient } = useContext(PatientContext);
@@ -21,7 +21,6 @@ function PatientForm() {
     const formattedCpf = cpf.replace(/\D/g, '');
 
     const newPatient = {
-      //id: Math.random().toString(36).substr(2, 9),
       nome,
       cpf: formattedCpf,
       data_nascimento,

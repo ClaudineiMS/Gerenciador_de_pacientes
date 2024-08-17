@@ -4,7 +4,7 @@ import React, { createContext, useState } from 'react';
 const PatientContext = createContext();
 
 // URL do endpoint da API
-const API_URL = 'https://apipacientes-production.up.railway.app/api/pacientes/';
+const API_URL = 'https://apipacientes-production.up.railway.app/api/cadastrar/';
 
 // Componente provedor do contexto
 export const PatientProvider = ({ children }) => {
