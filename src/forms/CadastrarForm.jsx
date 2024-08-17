@@ -3,7 +3,7 @@ import InputMask from 'react-input-mask';
 import PatientContext from '../contexts/PatientContext';
 import './css/PatientForm.css';
 
-function PatientForm() {
+function CadastrarForm() {
   const { addPatient } = useContext(PatientContext);
   const [nome, setnome] = useState('');
   const [cpf, setCpf] = useState('');
@@ -68,4 +68,4 @@ function PatientForm() {
   );
 }
 
-export default PatientForm;
+export default CadastrarForm;
