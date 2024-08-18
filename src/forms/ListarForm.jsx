@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import './css/PatientForm.css';
 import EditPatientForm from "./EditarForm";
+import './css/PatientForm.css';
 
 const ListPatients = () => {
   const [patients, setPatients] = useState([]);
@@ -40,15 +40,24 @@ const ListPatients = () => {
     }
   };
 
-  // Função para atualizar o estado do paciente após a edição
+ // Função para salvar as alterações feitas no paciente
   const handleSave = (updatedPatient) => {
-    setPatients(
-      patients.map((patient) =>
-        patient.id === editingPatient.id ? { ...patient, ...updatedPatient } : patient
-      )
-    );
+    const updatedPatientsList = patients.map((patient) => {
+      if (patient.id === editingPatient.id) {
+        // Se o ID do paciente atual corresponder ao ID do paciente em edição
+        return { ...patient, ...updatedPatient };
+      }
+      
+      return patient;
+    });
+
+    // Atualiza o estado com a lista de pacientes atualizada
+    setPatients(updatedPatientsList);
+
+    // Limpa o estado de edição do paciente
     setEditingPatient(null);
   };
+
 
   // useEffect para buscar os pacientes quando o componente é montado
   useEffect(() => {
@@ -91,4 +100,4 @@ const ListPatients = () => {
 };
 
   
-  export default ListPatients;
+export default ListPatients;
