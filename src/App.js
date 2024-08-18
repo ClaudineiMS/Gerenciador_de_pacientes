@@ -3,6 +3,7 @@ import { PatientProvider } from './contexts/PatientContext';
 import CadastrarForm from './forms/CadastrarForm';
 import ListarForm from  './forms/ListarForm';
 import Sidebar from './sidebar/Sidebar';
+import EditPatientForm from './forms/EditPatientForm';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => {
@@ -15,8 +16,6 @@ const App = () => {
             <Routes>
               <Route path="/cadastrar" element={<CadastrarForm />} />
               <Route path="/listar" element={<ListarForm />} />
-              {/* <Route path="/editar" element={<EditPatient />} />
-              <Route path="/deletar" element={<DeletePatient />} /> */}
             </Routes>
           </div>
         </div>

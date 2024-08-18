@@ -7,10 +7,8 @@ const Sidebar = () => {
       <div className="sidebar">
         <h2>Menu</h2>
         <ul>
-          <li><Link to="/cadastrar">Cadastro de Pacientes</Link></li>
+          <li><Link to="/cadastrar">Cadastrar Pacientes</Link></li>
           <li><Link to="/listar">Listar Pacientes</Link></li>
-          <li><Link to="/editar">Editar Pacientes</Link></li>
-          <li><Link to="/deletar">Deletar Pacientes</Link></li>
         </ul>
       </div>
     );
