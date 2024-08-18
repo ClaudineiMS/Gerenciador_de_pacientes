@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import './css/PatientForm.css';
-import EditPatientForm from "./EditPatientForm";
+import EditPatientForm from "./EditarForm";
 
 const ListPatients = () => {
   const [patients, setPatients] = useState([]);

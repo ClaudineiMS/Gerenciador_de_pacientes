@@ -3,7 +3,6 @@ import { PatientProvider } from './contexts/PatientContext';
 import CadastrarForm from './forms/CadastrarForm';
 import ListarForm from  './forms/ListarForm';
 import Sidebar from './sidebar/Sidebar';
-import EditPatientForm from './forms/EditPatientForm';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => {
