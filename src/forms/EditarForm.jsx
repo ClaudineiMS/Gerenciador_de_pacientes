@@ -11,13 +11,13 @@ const EditPatientForm = ({ patient, onCancel, onSave }) => {
   // Função para lidar com a submissão do formulário
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    const formattedCpf = cpf.replace(/\D/g, '');
     const updatedPatient = {
       nome,
-      cpf,
+      cpf:formattedCpf,
       data_nascimento: dataNascimento,
     };
-
+ 
     try {
       const response = await fetch(`https://apipacientes-production.up.railway.app/api/pacientes/${patient.id}/editar/`, {
         method: 'PUT',
