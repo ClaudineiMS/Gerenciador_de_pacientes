@@ -17,7 +17,7 @@ const EditPatientForm = ({ patient, onCancel, onSave }) => {
       cpf:formattedCpf,
       data_nascimento: dataNascimento,
     };
- 
+    
     try {
       const response = await fetch(`https://apipacientes-production.up.railway.app/api/pacientes/${patient.id}/editar/`, {
         method: 'PUT',
@@ -45,7 +45,7 @@ const EditPatientForm = ({ patient, onCancel, onSave }) => {
       <Input title={"Nome"} type={"text"} value={nome} onclick={(e) => setNome(e.target.value)}/>
       <Input title={"CPF"} type={"text"} value={cpf} onclick={(e) => setCpf(e.target.value)}/>
       <Input title={"Data de Nascimento"} type={"date"} value={dataNascimento} onclick={(e) => setDataNascimento(e.target.value)}/>
-      <Button title={"Salvar"}  className={"save-button"} type={"submit"}/>
+      <Button title={"Salvar"}  className={"save-button"} type={"submit"} disabled={cpf.replace(/\D/g, '').length < 11 ? true: false}/>
       <Button title={"Cancelar"}  className={"cancel-button"} type={"button"} onClick={onCancel}/>   
     </form>
   );

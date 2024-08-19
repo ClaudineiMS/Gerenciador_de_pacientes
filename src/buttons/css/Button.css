@@ -58,3 +58,9 @@ button:hover {
     color: white;
 }
   
+button:disabled {
+    background-color: #cccccc; /* Cor de fundo cinza */
+    color: #666666; /* Cor do texto cinza escuro */
+    cursor: not-allowed; /* Cursor indicando que o botão não pode ser clicado */
+    opacity: 0.6; /* Torna o botão um pouco transparente */
+}

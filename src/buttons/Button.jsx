@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from 'prop-types';
 import './css/Button.css';
 
-export const Button = ({ onClick, title, className, type }) => {
+export const Button = ({ onClick, title, className, type, disabled }) => {
     return (
-        <button type={type} className={className} onClick={onClick}>{title}</button>
+        <button type={type} className={className} onClick={onClick} disabled={disabled}>{title}</button>
     );
 };
 
@@ -14,4 +14,3 @@ Button.propTypes = {
     className: PropTypes.string,
     type: PropTypes.string
 };
-

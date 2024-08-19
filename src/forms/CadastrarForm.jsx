@@ -32,7 +32,7 @@ function CadastrarForm() {
     setCpf('');
     setdata_nascimento('');
   };
-
+ 
   return (
     <form onSubmit={handleSubmit} className='form' >
       <div className='input'>
@@ -40,7 +40,7 @@ function CadastrarForm() {
         <Input title={"CPF"} type={"text"} value={cpf} onclick={(e) => setCpf(e.target.value)}/>
         <Input title={"Data de Nascimento"} type={"date"} value={data_nascimento} onclick={(e) => setdata_nascimento(e.target.value)}/>
       </div>
-        <Button type={"submit"} title={"Cadastrar Paciente"}/>
+        <Button type={"submit"} title={"Cadastrar Paciente"} disabled={cpf.replace(/\D/g, '').length < 11 ? true: false}/>
     </form>
   );
 }
