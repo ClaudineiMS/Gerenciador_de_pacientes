@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './css/PatientForm.css';
 import { Button } from '../buttons/Button';
+import { Input } from '../Inputs/Input';
 
 const EditPatientForm = ({ patient, onCancel, onSave }) => {
   const [nome, setNome] = useState(patient.nome);
@@ -41,33 +42,9 @@ const EditPatientForm = ({ patient, onCancel, onSave }) => {
   return (
     <form className="patient-form" onSubmit={handleSubmit}>
       <h2>Editar Paciente</h2>
-      <label>
-        Nome:
-        <input
-          type="text"
-          value={nome}
-          onChange={(e) => setNome(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        CPF:
-        <input
-          type="text"
-          value={cpf}
-          onChange={(e) => setCpf(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Data de Nascimento:
-        <input
-          type="date"
-          value={dataNascimento}
-          onChange={(e) => setDataNascimento(e.target.value)}
-          required
-        />
-      </label>
+      <Input title={"Nome"} type={"text"} value={nome} onclick={(e) => setNome(e.target.value)}/>
+      <Input title={"CPF"} type={"text"} value={cpf} onclick={(e) => setCpf(e.target.value)}/>
+      <Input title={"Data de Nascimento"} type={"date"} value={dataNascimento} onclick={(e) => setDataNascimento(e.target.value)}/>
       <Button title={"Salvar"}  className={"save-button"} type={"submit"}/>
       <Button title={"Cancelar"}  className={"cancel-button"} type={"button"} onClick={onCancel}/>   
     </form>

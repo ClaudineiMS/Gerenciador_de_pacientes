@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
-import InputMask from 'react-input-mask';
 import PatientContext from '../contexts/PatientContext';
 import './css/PatientForm.css';
 import { Button } from '../buttons/Button';
+import { Input } from '../Inputs/Input';
 
 function CadastrarForm() {
   const { addPatient } = useContext(PatientContext);
@@ -34,37 +34,13 @@ function CadastrarForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Nome:</label>
-        <input
-          type="text"
-          value={nome}
-          onChange={(e) => setnome(e.target.value)}
-          required
-        />
+    <form onSubmit={handleSubmit} className='form' >
+      <div className='input'>
+        <Input title={"Nome"} type={"text"} value={nome} onclick={(e) => setnome(e.target.value)}/>
+        <Input title={"CPF"} type={"text"} value={cpf} onclick={(e) => setCpf(e.target.value)}/>
+        <Input title={"Data de Nascimento"} type={"date"} value={data_nascimento} onclick={(e) => setdata_nascimento(e.target.value)}/>
       </div>
-      <div>
-        <label>CPF:</label>
-        <InputMask
-          mask="999.999.999-99" // Máscara do CPF
-          value={cpf}
-          onChange={(e) => setCpf(e.target.value)}
-          required
-        >
-          {(inputProps) => <input {...inputProps} type="text" />}
-        </InputMask>
-      </div>
-      <div>
-        <label>Data de Nascimento:</label>
-        <input
-          type="date"
-          value={data_nascimento}
-          onChange={(e) => setdata_nascimento(e.target.value)}
-          required
-        />
-      </div>
-      <Button type={"submit"} title={"Cadastrar Paciente"}/>
+        <Button type={"submit"} title={"Cadastrar Paciente"}/>
     </form>
   );
 }

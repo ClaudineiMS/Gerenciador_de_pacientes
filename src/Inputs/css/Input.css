@@ -1,0 +1,20 @@
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    width: 96%;
+}
+  
+input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.patient-form input {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }

@@ -1,82 +1,69 @@
 /* Estilo base para o formulário */
 form {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
   
-  /* Estilo para cada campo do formulário */
-  form div {
-    display: flex;
-    flex-direction: column;
-  }
+/* Estilo para cada campo do formulário */
+form div {
+  display: flex;
+  flex-direction: column;
+}
   
-  label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-  }
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
   
-  input {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
-  }
+.patient-list {
+  padding: 20px;
+}
   
-  input:focus {
-    outline: none;
-    border-color: #007bff;
-  }
-
-  .patient-list {
-    padding: 20px;
-  }
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
   
-  .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
+.patient-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 300px;
+  transition: transform 0.2s;
+}
   
-  .patient-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    width: 300px;
-    transition: transform 0.2s;
-  }
+.patient-card:hover {
+  transform: translateY(-5px);
+}
   
-  .patient-card:hover {
-    transform: translateY(-5px);
-  }
+.patient-card h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
   
-  .patient-card h3 {
-    margin-top: 0;
-    font-size: 1.5em;
-  }
+.patient-card p {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #555;
+}
   
-  .patient-card p {
-    margin: 10px 0;
-    font-size: 1em;
-    color: #555;
-  }
-  
-  .patient-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 200px;
-  }
+.patient-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+}
 
 
 .patient-form {
@@ -94,11 +81,4 @@ form {
 .patient-form label {
   margin-bottom: 10px;
   font-weight: bold;
-}
-
-.patient-form input {
-  margin-top: 5px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
 }
