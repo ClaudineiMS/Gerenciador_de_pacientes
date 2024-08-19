@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import InputMask from 'react-input-mask';
 import PatientContext from '../contexts/PatientContext';
 import './css/PatientForm.css';
+import { Button } from '../buttons/Button';
 
 function CadastrarForm() {
   const { addPatient } = useContext(PatientContext);
@@ -63,7 +64,7 @@ function CadastrarForm() {
           required
         />
       </div>
-      <button type="submit">Cadastrar Paciente</button>
+      <Button type={"submit"} title={"Cadastrar Paciente"}/>
     </form>
   );
 }

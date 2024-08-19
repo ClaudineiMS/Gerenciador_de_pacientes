@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import EditPatientForm from "./EditarForm";
 import './css/PatientForm.css';
+import { Button } from "../buttons/Button";
 
 const ListPatients = () => {
   const [patients, setPatients] = useState([]);
@@ -73,18 +74,8 @@ const ListPatients = () => {
             <h3>{patient.nome}</h3>
             <p><strong>CPF:</strong> {patient.cpf}</p>
             <p><strong>Data de Nascimento:</strong> {patient.data_nascimento}</p>
-            <button 
-              className="edit-button"
-              onClick={() => setEditingPatient(patient)}
-            >
-              Editar
-            </button>
-            <button 
-              className="delete-button"
-              onClick={() => deletePatient(patient.id)}
-            >
-              Deletar
-            </button>
+            <Button title={"Editar"} onClick={() => setEditingPatient(patient)} className={"edit-button"} type={"button"}/>
+            <Button title={"Deletar"} onClick={() => deletePatient(patient.id)} className={"delete-button"} type={"button"}/>
           </div>
         ))}
       </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './css/PatientForm.css';
+import { Button } from '../buttons/Button';
 
 const EditPatientForm = ({ patient, onCancel, onSave }) => {
   const [nome, setNome] = useState(patient.nome);
@@ -67,8 +68,8 @@ const EditPatientForm = ({ patient, onCancel, onSave }) => {
           required
         />
       </label>
-      <button type="submit" className="save-button">Salvar</button>
-      <button type="button" className="cancel-button" onClick={onCancel}>Cancelar</button>
+      <Button title={"Salvar"}  className={"save-button"} type={"submit"}/>
+      <Button title={"Cancelar"}  className={"cancel-button"} type={"button"} onClick={onCancel}/>   
     </form>
   );
 };
