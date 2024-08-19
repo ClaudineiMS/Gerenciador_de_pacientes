@@ -42,7 +42,3 @@ Input.propTypes = {
     ]).isRequired,
     onclick: PropTypes.func.isRequired
 };
-
-Input.defaultProps = {
-    type: "text",
-};
