@@ -24,3 +24,8 @@ password: admin
 docker-compose build
 docker-compose up
 ```
+### API Github
+https://github.com/ClaudineiMS/Api_pacientes
+
+### API hospedagem
+https://apipacientes-production.up.railway.app/api/pacientes/
