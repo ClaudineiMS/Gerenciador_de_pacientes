@@ -11,6 +11,6 @@ npm start
 
 ```bash
 user: admin
-senha: admin
+password: admin
 ```
 
