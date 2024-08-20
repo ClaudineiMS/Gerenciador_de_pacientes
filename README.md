@@ -4,7 +4,13 @@ Após clonar o projeto navegue até o diretório do mesmo e execute:
 
 ```bash
 npm install
+npm start
 ```
 
-### `npm start`
+## `Login`
+
+```bash
+user: admin
+senha: admin
+```
 
