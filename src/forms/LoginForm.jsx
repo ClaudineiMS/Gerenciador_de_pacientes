@@ -10,35 +10,12 @@ const LoginForm = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
     // Checa se é o usuário padrão
     if (username === 'admin' && password === 'admin') {
       // Faz login com o usuário padrão
       sessionStorage.setItem('access_token', 'fake-token');
       navigate('/listar');
     } 
-    // else {
-    //   // Faz a requisição para a API de login
-    //   try {
-    //     const response = await fetch('http://localhost:8000/login/', {
-    //       method: 'POST',
-    //       headers: {
-    //         'Content-Type': 'application/json',
-    //       },
-    //       body: JSON.stringify({ username, password }),
-    //     });
-
-    //     const data = await response.json();
-    //     if (response.ok) {
-    //       sessionStorage.setItem('access_token', data.access);
-    //       navigate('/listar');
-    //     } else {
-    //       alert('Login falhou. Verifique suas credenciais.');
-    //     }
-    //   } catch (error) {
-    //     console.error('Erro durante o login:', error);
-    //   }
-    // }
   };
 
   return (
